@@ -1,0 +1,17 @@
+{
+    "contents" : "#\n# 2014-01-27\n#\n\ntest1.raw<-read.csv(\"data/test1.csv\", sep = \";\")\ntest1.raw <- test1.raw[with(test1.raw, order(obs)), ]\nhead(test1.raw)\ntail(test1.raw)\n\ntest2.raw<-read.csv(\"data/test2.csv\", sep = \";\")\ntest2.raw <- test2.raw[with(test2.raw, order(obs)), ]\nhead(test2.raw)\ntail(test2.raw)\n\n\nrequire(xts)\n\ntest1.alpha <- vector()\ntest2.alpha <- vector()\n\n\n#################################\nfor(i in 2:length(test1.raw$r)){\n  tmp.data <- test1.raw[test1.raw$obs <= i,]\n  test1.ts <- ts(tmp.data[1:length(tmp.data$r), c(\"r\")])\n  test1.expo <- HoltWinters(test1.ts, \n                            #alpha = 0.01,\n                            beta = FALSE, \n                            gamma = FALSE)\n  \n  test1.alpha[i] <- test1.expo$alpha\n  \n}\n\nplot(test1.alpha, type = \"l\")\nhead(test1.raw)\n\ntest1.raw$alpha_PS <- test1.alpha\nwrite.csv(test1.raw, file = \"data/test1data.csv\")\n\n\n\n#################################\nfor(i in 2:length(test2.raw$r)){\n  tmp.data <- test2.raw[test2.raw$obs <= i,]\n  test2.ts <- ts(tmp.data[1:length(tmp.data$r), c(\"r\")])\n  test2.expo <- HoltWinters(test2.ts, \n                            #alpha = 0.01,\n                            beta = FALSE, \n                            gamma = FALSE)\n  \n  test2.alpha[i] <- test2.expo$alpha\n  \n}\n\nplot(test2.alpha, type = \"l\")\nhead(test2.raw)\n\ntest2.raw$alpha_PS <- test2.alpha\nwrite.csv(test2.raw, file = \"data/test2data.csv\")\n",
+    "created" : 1390822558201.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2019376368",
+    "id" : "51A3C619",
+    "lastKnownWriteTime" : 1390826999,
+    "path" : "C:/Users/Pawel/Dropbox/02.TEACHING/SemLic_2013-2014/dyskusje/Karol.Domzala/2014-01-14/a-03.R",
+    "project_path" : "a-03.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

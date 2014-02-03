@@ -1,0 +1,17 @@
+{
+    "contents" : "#\n#\n#\n\nsource(\"EWMAvol.R\")\n\n\nmyData <- \n  as.matrix(\n    cbind(\n    rnorm(250),\n    rnorm(250),\n    rnorm(250),\n    rnorm(250),\n    rnorm(250)\n    )\n  )\n\newma.results <- EWMAvol(myData, lambda=0.505)\nsigma.t <- ewma.results$Sigma.t\nlast.sigma.t <- sigma.t[250, ]\ndim(last.sigma.t) <- c(5,5)\nlast.sigma.t\n",
+    "created" : 1389719323592.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "404195303",
+    "id" : "C5927F2",
+    "lastKnownWriteTime" : 1389720040,
+    "path" : "C:/Users/Pawel/Dropbox/02.TEACHING/SemLic_2013-2014/dyskusje/Karol.Domzala/2014-01-14/a-01.R",
+    "project_path" : "a-01.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
