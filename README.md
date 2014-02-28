@@ -2,4 +2,4 @@ Simple exponential smoothing to forecast returns and variance-covariance matrix 
 --------------------
 
 Initialized: 2014-02-03
-Author: Pawe≥ Sakowski (pawelsakowski@gmail.com)
+Author: Pawe≈Ç Sakowski (pawelsakowski@gmail.com)
