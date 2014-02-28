@@ -2,5 +2,6 @@
 *.RData
 *.Rproj.user
 .Rproj.user/
+*.Rproj
 
 README.html
