@@ -1,6 +1,7 @@
-# Application of exp. smoothing techniques
+# simple exponential smoothing techniques
 
-Simple exponential smoothing to forecast returns and variance-covariance matrix in portfolio analysis.
+Simple exponential smoothing to forecast returns and variance-covariance matrix in portfolio analysis.  
+Initialized: 2014-02-03  
+Author: Paweł Sakowski (pawelsakowski@gmail.com)  
 
-Initialized: 2014-02-03
-Author: Paweł Sakowski (pawelsakowski@gmail.com)
+ 
